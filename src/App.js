@@ -9,8 +9,8 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.6,1200);
 camera.position.z = 5;
 
-//Loader
-const loader = new FBXLoader();
+// Loader
+// const loader = new FBXLoader();
 
 
 //Renderer
@@ -35,12 +35,12 @@ boxMesh.rotation.set(40,0,40);
 scene.add(boxMesh);
 
 //Load a model
-loader.load("models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx", function(object){
-    scene.add(object.scene);
-}, undefined, function (error) {
-    console.error(error);
+// loader.load("models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx", function(object){
+//     scene.add(object.scene);
+// }, undefined, function (error) {
+//     console.error(error);
 
-});
+// });
 
 
 //Light

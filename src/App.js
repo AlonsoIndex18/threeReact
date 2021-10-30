@@ -12,8 +12,9 @@ function addObject(size,posX,posY,posZ,color,scene){
   const boxMaterial = new THREE.MeshLambertMaterial({color: color});
   const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
   scene.add(boxMesh);
-  boxMesh.position = new Vector3(posX,posY,posZ);
-  
+  boxMesh.position.x = posX;
+  boxMesh.position.y = posY;
+  boxMesh.position.z = posZ;
 }
 
 //Camera

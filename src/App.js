@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
 import * as THREE from 'three';
-
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 const scene = new THREE.Scene();
 
 //Camera
@@ -10,7 +10,7 @@ const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHe
 camera.position.z = 5;
 
 // Loader
-// const loader = new FBXLoader();
+const fbxloader = new FBXLoader
 
 
 //Renderer
@@ -35,6 +35,17 @@ boxMesh.rotation.set(40,0,40);
 scene.add(boxMesh);
 
 //Load a model
+fbxloader.load('resources/models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx' , (object) =>{
+  scene.add(object)
+  },
+  (xhr) => {
+    console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+  },
+  (error) => {
+    console.log(error)
+  }
+)
+
 // loader.load("models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx", function(object){
 //     scene.add(object.scene);
 // }, undefined, function (error) {

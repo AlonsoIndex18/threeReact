@@ -6,6 +6,13 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 const scene = new THREE.Scene();
 
+function addObject(posX,posY,posZ,color,scene){
+  const boxGeometry = new THREE.BoxGeometry(posX,posY,posZ);
+  const boxMaterial = new THREE.MeshLambertMaterial({color: color});
+  const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
+  scene.add(boxMesh);
+}
+
 //Camera
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,0.6,1200);
 camera.position.z = 5;
@@ -29,11 +36,12 @@ window.addEventListener('resize', () => {
 })
 
 //Create object
-const boxGeometry = new THREE.BoxGeometry(2,2,2);
-const boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
-const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
+addObject(0,0,0,'blue',scene);
+addObject(5,0,0,'black',scene);
+addObject(0,5,0,'red',scene);
+
 //boxMesh.rotation.set(40,0,40);
-scene.add(boxMesh);
+
 
 //Trackball Controls
 const controls = new TrackballControls(camera, renderer.domElement);

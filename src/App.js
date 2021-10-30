@@ -84,8 +84,8 @@ const lights = [];
 const rendering = function() {
     requestAnimationFrame(rendering);
 
-    scene.rotation.z -=0.05;
-    scene.rotation.x -=0.01;
+    // scene.rotation.z -=0.05;
+    // scene.rotation.x -=0.01;
     renderer.render(scene,camera);
     controls.update();
 }

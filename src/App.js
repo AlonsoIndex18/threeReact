@@ -2,7 +2,8 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
 import * as THREE from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
+import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 const scene = new THREE.Scene();
 
 //Camera
@@ -34,6 +35,12 @@ const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
 boxMesh.rotation.set(40,0,40);
 scene.add(boxMesh);
 
+//Trackball Controls
+const controls = new TrackballControls(camera, renderer.domElement);
+controls.rotateSpeed = 4;
+controls. dynamicDampingFactor = 0.15;
+
+
 //Load a model
 
 fbxloader.load('./resources/models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx' , (object) =>{
@@ -60,6 +67,19 @@ const light = new THREE.PointLight(0xFFFFFF, 1, 100);
 light.position.set(5,5,5);
 scene.add(light);
 
+const lights = [];
+
+// const lightValues = [
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8},
+//   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8}
+// ];
+
+
+
 
 const rendering = function() {
     requestAnimationFrame(rendering);
@@ -67,6 +87,7 @@ const rendering = function() {
     scene.rotation.z -=0.05;
     scene.rotation.x -=0.01;
     renderer.render(scene,camera);
+    controls.update();
 }
 rendering();
 

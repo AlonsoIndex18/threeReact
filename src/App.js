@@ -4,6 +4,7 @@ import './App.css';
 import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
+import { Vector3 } from 'three';
 const scene = new THREE.Scene();
 
 function addObject(size,posX,posY,posZ,color,scene){
@@ -11,7 +12,7 @@ function addObject(size,posX,posY,posZ,color,scene){
   const boxMaterial = new THREE.MeshLambertMaterial({color: color});
   const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
   scene.add(boxMesh);
-  boxMesh.position(posX,posY,posZ);
+  boxMesh.position = new Vector3(posX,posY,posZ);
   
 }
 

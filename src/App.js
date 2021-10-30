@@ -11,7 +11,7 @@ const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHe
 camera.position.z = 5;
 
 // Loader
-const fbxloader = new FBXLoader
+const fbxloader = new FBXLoader();
 
 
 //Renderer

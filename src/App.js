@@ -43,7 +43,7 @@ controls. dynamicDampingFactor = 0.15;
 
 //Load a model
 
-fbxloader.load('./resources/models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx' , (object) =>{
+fbxloader.load('./resources/models/fbx/akiko/source/LOD0.fbx' , (object) =>{
   scene.add(object)
   },
   (xhr) => {

@@ -35,7 +35,9 @@ boxMesh.rotation.set(40,0,40);
 scene.add(boxMesh);
 
 //Load a model
-fbxloader.load('resources/models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx' , (object) =>{
+
+const path = require('./resources/models/fbx/akiko-sama-anime-character-model/source/L0D0.fbx')
+fbxloader.load(path , (object) =>{
   scene.add(object)
   },
   (xhr) => {

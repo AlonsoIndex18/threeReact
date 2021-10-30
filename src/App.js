@@ -36,8 +36,7 @@ scene.add(boxMesh);
 
 //Load a model
 
-const path = require('./resources/models/fbx/akiko-sama-anime-character-model/source/L0D0.fbx')
-fbxloader.load(path , (object) =>{
+fbxloader.load('./resources/models/fbx/akiko-sama-anime-character-model/source/LOD0.fbx' , (object) =>{
   scene.add(object)
   },
   (xhr) => {

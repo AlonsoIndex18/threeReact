@@ -32,7 +32,7 @@ window.addEventListener('resize', () => {
 const boxGeometry = new THREE.BoxGeometry(2,2,2);
 const boxMaterial = new THREE.MeshLambertMaterial({color: 0xFFFFFF});
 const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
-boxMesh.rotation.set(40,0,40);
+//boxMesh.rotation.set(40,0,40);
 scene.add(boxMesh);
 
 //Trackball Controls

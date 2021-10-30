@@ -6,11 +6,13 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 const scene = new THREE.Scene();
 
-function addObject(posX,posY,posZ,color,scene){
-  const boxGeometry = new THREE.BoxGeometry(posX,posY,posZ);
+function addObject(size,posX,posY,posZ,color,scene){
+  const boxGeometry = new THREE.BoxGeometry(size,size,size);
   const boxMaterial = new THREE.MeshLambertMaterial({color: color});
   const boxMesh = new THREE.Mesh(boxGeometry,boxMaterial);
   scene.add(boxMesh);
+  boxMesh.position(posX,posY,posZ);
+  
 }
 
 //Camera
@@ -36,9 +38,9 @@ window.addEventListener('resize', () => {
 })
 
 //Create object
-addObject(0,0,0,'blue',scene);
-addObject(5,0,0,'black',scene);
-addObject(0,5,0,'red',scene);
+addObject(2,5,0,0,0xFFFFFF,scene);
+addObject(2,0,5,0,0x0000FF,scene);
+addObject(2,0,0,5,0xFFD700,scene);
 
 //boxMesh.rotation.set(40,0,40);
 

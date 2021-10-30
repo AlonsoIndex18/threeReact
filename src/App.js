@@ -15,6 +15,8 @@ function addObject(size,posX,posY,posZ,color,scene){
   boxMesh.position.x = posX;
   boxMesh.position.y = posY;
   boxMesh.position.z = posZ;
+
+  return boxMesh;
 }
 
 //Camera
@@ -40,13 +42,13 @@ window.addEventListener('resize', () => {
 })
 
 //Create object
-addObject(2,5,0,0,0xFFFFFF,scene);
-addObject(2,0,5,0,0x0000FF,scene);
-addObject(2,0,0,5,0xFFD700,scene);
+const cubeOne = addObject(2,5,0,0,0xFFFFFF,scene);
+const cubeTwo = addObject(2,0,5,0,0x0000FF,scene);
+const cubeThree = addObject(2,0,0,5,0xFFD700,scene);
 
 //boxMesh.rotation.set(40,0,40);
 
-
+cubeOne.lookAt(camera.position);
 //Trackball Controls
 const controls = new TrackballControls(camera, renderer.domElement);
 controls.rotateSpeed = 4;

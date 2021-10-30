@@ -49,7 +49,7 @@ const cubeThree = addObject(2,0,0,5,0xFFD700,scene);
 //boxMesh.rotation.set(40,0,40);
 
 cubeOne.lookAt(camera.position);
-cubeTwo.rotateX(10);
+cubeTwo.rotateX(50);
 //Trackball Controls
 const controls = new TrackballControls(camera, renderer.domElement);
 controls.rotateSpeed = 4;

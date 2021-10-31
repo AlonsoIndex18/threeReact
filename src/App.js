@@ -108,6 +108,7 @@ rendering();
 
 function moveCube(){
   handleKeyDown = (event) => {
+    console.log("works")
     if (event.key === 'W'){
       cubeOne.posX += 1;
       console.log("W");

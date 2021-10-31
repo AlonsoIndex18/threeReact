@@ -129,7 +129,7 @@ function App() {
   return (
     <main>
       <div>
-        <input type="text" id="one"  onKeyPress = {handleKeyDown} />
+        <input type="text" id="one"  onKeyPress = {this.handleKeyDown} />
       </div>
       <scene/>
       

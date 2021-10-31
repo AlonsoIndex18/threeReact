@@ -107,7 +107,7 @@ const rendering = function() {
 rendering();
 
 function moveCube(){
-  handleKeyPress = (event) => {
+  handleKeyDown = (event) => {
     if (event.key === 'W'){
       cubeOne.posX += 1;
       console.log("W");
@@ -129,7 +129,7 @@ function App() {
 
   return (
     <main>
-      <input type="text" id="one" onKeyPress={this.handleKeyPress} />
+      <input type="text"  onKeyDown={this.handleKeyDown} />
       <scene/>
       
     </main>

@@ -106,7 +106,6 @@ const rendering = function() {
 }
 rendering();
 
-function moveCube(){
   handleKeyDown = (event) => {
     console.log("works")
     if (event.key === 'W'){
@@ -123,14 +122,16 @@ function moveCube(){
       console.log("D");
     }
   }
-}
+
 
 
 function App() {
 
   return (
     <main>
-      <input type="text"  onKeyDown={this.handleKeyDown} />
+      <div>
+        <input type="text" id="one"  onKeyPress = {handleKeyDown} />
+      </div>
       <scene/>
       
     </main>

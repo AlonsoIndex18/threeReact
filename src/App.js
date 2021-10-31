@@ -107,17 +107,17 @@ const rendering = function() {
 rendering();
 
 function moveCube(){
-  handleKeyPress = event => {
-    if (event.key == 'W'){
+  handleKeyPress = (event) => {
+    if (event.key === 'W'){
       cubeOne.posX += 1;
       console.log("W");
-    }else if(event.key == 'A'){
+    }else if(event.key === 'A'){
       cubeOne.posZ += 1;
       console.log("A");
-    }else if(event.key == 'S'){
+    }else if(event.key === 'S'){
       cubeOne.posX -= 1;
       console.log("S");
-    }else if(event.key == 'D'){
+    }else if(event.key === 'D'){
       cubeOne.posZ -= 1;
       console.log("D");
     }
@@ -129,7 +129,7 @@ function App() {
 
   return (
     <main>
-      <input type="text" value="answer" onKeyPress={this.handleKeyPress} />
+      <input type="text" id="one" onKeyPress={this.handleKeyPress} />
       <scene/>
       
     </main>

@@ -5,6 +5,8 @@ import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 import { Vector3 } from 'three';
+
+
 const scene = new THREE.Scene();
 
 function addObject(size,posX,posY,posZ,color,scene){
@@ -105,8 +107,13 @@ const rendering = function() {
     controls.update();
 }
 rendering();
+  
+
+
+function App() {
 
   const handleKeyDown = (event) => {
+    const key = event.nativeEvent.code;
     console.log("works")
     if (event.key === 'W'){
       cubeOne.posX += 1;
@@ -122,10 +129,6 @@ rendering();
       console.log("D");
     }
   }
-
-
-function App() {
-
   return (
     <main>
       <div>

@@ -106,12 +106,26 @@ const rendering = function() {
 }
 rendering();
 
+function moveCube(){
+  handleKeyPress = event => {
+    if (event.key == 'W'){
+      cubeOne.posX += 1;
+    }else if(event.key == 'A'){
+      cubeOne.posZ += 1;
+    }else if(event.key == 'S'){
+      cubeOne.posX -= 1;
+    }else if(event.key == 'D'){
+      cubeOne.posZ -= 1;
+    }
+  }
+}
 
 
 function App() {
 
   return (
     <main>
+      <input type='text' value='answer' onKeyPress={this.handleKeyPress} />
       <scene/>
       
     </main>

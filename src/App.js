@@ -105,7 +105,7 @@ const rendering = function() {
     controls.update();
 }
 rendering();
-
+function moveCube(){
   handleKeyDown = (event) => {
     console.log("works")
     if (event.key === 'W'){
@@ -122,8 +122,7 @@ rendering();
       console.log("D");
     }
   }
-
-
+}
 
 function App() {
 

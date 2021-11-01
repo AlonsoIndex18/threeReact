@@ -116,10 +116,10 @@ function App() {
     <main>
       <div>
       <scene/>  
-      <button className="button" id="butUp"></button>
-      <button className="button" id="butDown"></button>
-      <button className="button" id="butLeft"></button>
-      <button className="button" id="butRight"></button>
+      <button className="button" id="butUp" value="Up">Up</button>
+      <button className="button" id="butDown">Down</button>
+      <button className="button" id="butLeft">Left</button>
+      <button className="button" id="butRight">Right</button>
       </div>
       
       

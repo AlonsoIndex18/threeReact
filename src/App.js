@@ -108,8 +108,8 @@ const rendering = function() {
 }
 rendering();
   
-function movement(direction){
-  cubeOne.translateX(direction);
+function movement(){
+  cubeOne.translateX(5);
 }
 
 function App() {
@@ -118,8 +118,8 @@ function App() {
     <main>
       <div>
       <scene/>  
-      <button className="button" id="butUp" onClick={movement(1)}>Up</button>
-      <button className="button" id="butDown" onClick={movement(-1)}>Down</button>
+      <button className="button" id="butUp" onClick={movement}>Up</button>
+      <button className="button" id="butDown" onClick={movement}>Down</button>
       <button className="button" id="butLeft">Left</button>
       <button className="button" id="butRight">Right</button>
       </div>

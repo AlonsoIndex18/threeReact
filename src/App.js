@@ -123,7 +123,6 @@ function movement(direction){
 }
 
 function rot(status){
-  requestAnimationFrame(renderer);
   if(status == "on"){
     cubeTwo.rotation.y = 0.1;
   }else if(status == "off"){

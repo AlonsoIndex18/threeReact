@@ -112,9 +112,14 @@ rendering();
   
 function movement(direction){
   if(direction=="up"){
-    cubeOne.position.y += 1;
-  }else if(direction=="down")
+    cubeOne.translateX(1);
+  }else if(direction=="down"){
     cubeOne.position.y -= 1;
+  }else if(direction=="left"){
+  cubeOne.position.x -= 1;
+  }else if(direction=="right"){
+    cubeOne.position.x += 1;
+  }
 }
 
 function App() {
@@ -125,8 +130,8 @@ function App() {
       <scene/>  
       <button className="button" id="butUp" onClick={()=> movement("up")}>Up</button>
       <button className="button" id="butDown" onClick={()=>movement("down")}>Down</button>
-      <button className="button" id="butLeft">Left</button>
-      <button className="button" id="butRight">Right</button>
+      <button className="button" id="butLeft" onClick={()=>movement("left")}>Left</button>
+      <button className="button" id="butRight" onClick={()=>movement("right")}>Right</button>
       </div>
       
       

@@ -111,30 +111,17 @@ rendering();
 
 
 function App() {
-
-  const handleKeyDown = (event) => {
-    const key = event.nativeEvent.code;
-    console.log("works")
-    if (event.key === 'W'){
-      cubeOne.posX += 1;
-      console.log("W");
-    }else if(event.key === 'A'){
-      cubeOne.posZ += 1;
-      console.log("A");
-    }else if(event.key === 'S'){
-      cubeOne.posX -= 1;
-      console.log("S");
-    }else if(event.key === 'D'){
-      cubeOne.posZ -= 1;
-      console.log("D");
-    }
-  }
+  
   return (
     <main>
       <div>
-        <input type="text" id="one"  onKeyDown = {this.handleKeyDown} />
+      <scene/>  
+      <button className="button" id="butUp"></button>
+      <button className="button" id="butDown"></button>
+      <button className="button" id="butLeft"></button>
+      <button className="button" id="butRight"></button>
       </div>
-      <scene/>
+      
       
     </main>
   );

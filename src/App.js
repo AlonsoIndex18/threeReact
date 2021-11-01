@@ -128,6 +128,7 @@ function rot(status){
   }else if(status == "off"){
     cubeTwo.rotation.y = 0;
   }
+  rendering();
 }
 
 function App() {

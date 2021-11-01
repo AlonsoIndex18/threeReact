@@ -4,7 +4,7 @@ import './App.css';
 import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
-import { Vector3 } from 'three';
+import { AxesHelper, Vector3 } from 'three';
 
 
 const scene = new THREE.Scene();
@@ -95,7 +95,9 @@ const lights = [];
 //   {colour: 0x14D14A, intensity: 8, dist: 12, x: 1, y: 0, z: 8}
 // ];
 
-
+//showing axes
+const axes = new THREE.AxesHelper(5);
+scene.add(AxesHelper);
 
 
 const rendering = function() {

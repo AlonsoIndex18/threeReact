@@ -112,7 +112,7 @@ rendering();
   
 function movement(direction){
   if(direction=="up"){
-    cubeOne.translateX(1);
+    cubeOne.translateY(1);
   }else if(direction=="down"){
     cubeOne.position.y -= 1;
   }else if(direction=="left"){

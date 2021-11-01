@@ -51,7 +51,7 @@ const cubeThree = addObject(2,0,0,5,0xFFD700,scene);
 //boxMesh.rotation.set(40,0,40);
 
 cubeOne.lookAt(camera.position);
-cubeTwo.rotateX(50);
+
 //Trackball Controls
 const controls = new TrackballControls(camera, renderer.domElement);
 controls.rotateSpeed = 4;
@@ -124,6 +124,7 @@ function movement(direction){
 
 function rot(status){
   if(status == "on"){
+    rendering();
     cubeTwo.rotation.y = 0.1;
   }else if(status == "off"){
     cubeTwo.rotation.y = 0;

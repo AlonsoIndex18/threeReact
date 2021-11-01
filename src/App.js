@@ -122,6 +122,14 @@ function movement(direction){
   }
 }
 
+function rot(status){
+  if(status == "on"){
+    cubeTwo.setRotationFromEuler(new THREE.Euler(0,10,0));
+  }else if(status == "off"){
+    cubeTwo.setRotationFromEuler(new THREE.Euler(0,0,0));
+  }
+}
+
 function App() {
   
   return (
@@ -132,6 +140,8 @@ function App() {
       <button className="button" id="butDown" onClick={()=>movement("down")}>Down</button>
       <button className="button" id="butLeft" onClick={()=>movement("left")}>Left</button>
       <button className="button" id="butRight" onClick={()=>movement("right")}>Right</button>
+      <button className="button" id="butRotOn" onClick={()=>rot("on")}>Enable rotation</button>
+      <button className="button" id="butRotOff" onClick={()=>rot("off")}>Disable rotation</button>
       </div>
       
       

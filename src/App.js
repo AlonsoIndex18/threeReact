@@ -97,7 +97,7 @@ const lights = [];
 
 //showing axes
 const axes = new THREE.AxesHelper(5);
-scene.add(AxesHelper);
+scene.add(axes);
 
 
 const rendering = function() {

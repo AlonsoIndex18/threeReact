@@ -121,8 +121,8 @@ function App() {
     <main>
       <div>
       <scene/>  
-      <button className="button" id="butUp" onClick={movement("up")}>Up</button>
-      <button className="button" id="butDown" onClick={movement("down")}>Down</button>
+      <button className="button" id="butUp" onClick={()=> movement("up")}>Up</button>
+      <button className="button" id="butDown" onClick={()=>movement("down")}>Down</button>
       <button className="button" id="butLeft">Left</button>
       <button className="button" id="butRight">Right</button>
       </div>

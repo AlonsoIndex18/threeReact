@@ -109,7 +109,7 @@ const rendering = function() {
 rendering();
   
 function movement(){
-  cubeOne.translateX(5);
+  cubeOne.position.x += 1;
 }
 
 function App() {

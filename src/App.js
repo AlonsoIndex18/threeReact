@@ -124,9 +124,9 @@ function movement(direction){
 
 function rot(status){
   if(status == "on"){
-    cubeTwo.setRotationFromEuler(new THREE.Euler(0,10,0));
+    cubeTwo.rotation.y = 5;
   }else if(status == "off"){
-    cubeTwo.setRotationFromEuler(new THREE.Euler(0,0,0));
+    cubeTwo.rotation.y = 0;
   }
 }
 

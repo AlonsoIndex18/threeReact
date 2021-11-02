@@ -6,7 +6,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 import { AxesHelper, Vector3 } from 'three';
 
-var statuss;
+var statuss =true;
 const scene = new THREE.Scene();
 
 function addObject(size,posX,posY,posZ,color,scene){

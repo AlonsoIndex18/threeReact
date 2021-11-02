@@ -106,21 +106,6 @@ if(status){
   cubeTwo.rotation.y = 0;
 }
 
-const rendering = function() {
-    requestAnimationFrame(rendering);
-
-    if(status){
-      cubeTwo.rotation.y = 0.1;
-    }else{
-      cubeTwo.rotation.y = 0;
-    }
-
-    // scene.rotation.z -=0.05;
-    // scene.rotation.x -=0.01;
-    renderer.render(scene,camera);
-    controls.update();
-}
-rendering();
   
 function movement(direction){
   if(direction=="up"){
@@ -163,3 +148,19 @@ function App() {
 }
 
 export default App;
+
+const rendering = function() {
+  requestAnimationFrame(rendering);
+
+  if(status){
+    cubeTwo.rotation.y = 0.1;
+  }else{
+    cubeTwo.rotation.y = 0;
+  }
+
+  // scene.rotation.z -=0.05;
+  // scene.rotation.x -=0.01;
+  renderer.render(scene,camera);
+  controls.update();
+}
+rendering();

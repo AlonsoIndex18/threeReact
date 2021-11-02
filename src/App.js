@@ -6,7 +6,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 import { AxesHelper, Vector3 } from 'three';
 
-
+var status =false;
 const scene = new THREE.Scene();
 
 function addObject(size,posX,posY,posZ,color,scene){
@@ -100,9 +100,21 @@ const axes = new THREE.AxesHelper(5);
 scene.add(axes);
 
 
+if(status){
+  cubeTwo.rotation.y = 0.1;
+}else{
+  cubeTwo.rotation.y = 0;
+}
+
 const rendering = function() {
     requestAnimationFrame(rendering);
 
+    if(status){
+      cubeTwo.rotation.y = 0.1;
+    }else{
+      cubeTwo.rotation.y = 0;
+    }
+    
     // scene.rotation.z -=0.05;
     // scene.rotation.x -=0.01;
     renderer.render(scene,camera);
@@ -122,12 +134,11 @@ function movement(direction){
   }
 }
 
-function rot(status){
-  if(status == "on"){
-    rendering();
-    cubeTwo.rotation.y = 0.1;
-  }else if(status == "off"){
-    cubeTwo.rotation.y = 0;
+function rot(newStat){
+  if(newStat == "on"){
+    status = true;
+  }else if(newStat == "off"){
+    status = false;
   }
   
 }

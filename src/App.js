@@ -114,7 +114,7 @@ const rendering = function() {
     }else{
       cubeTwo.rotation.y = 0;
     }
-    
+
     // scene.rotation.z -=0.05;
     // scene.rotation.x -=0.01;
     renderer.render(scene,camera);
@@ -140,7 +140,7 @@ function rot(newStat){
   }else if(newStat == "off"){
     status = false;
   }
-  
+  rendering();
 }
 
 function App() {

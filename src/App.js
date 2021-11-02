@@ -153,7 +153,7 @@ const rendering = function() {
   requestAnimationFrame(rendering);
 
   if(status){
-    cubeTwo.rotation.y = 0.1;
+    cubeTwo.rotation.y = 0.05;
   }else{
     cubeTwo.rotation.y = 0;
   }

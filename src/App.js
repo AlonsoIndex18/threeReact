@@ -125,7 +125,7 @@ function rot(newStat){
   }else if(newStat == "off"){
     status = false;
   }
-  rendering();
+  
 }
 
 function App() {

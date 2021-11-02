@@ -145,15 +145,13 @@ export default App;
 
 const rendering = function() {
   requestAnimationFrame(rendering);
-  if(statuss!=null){
-    if(statuss){
-      cubeTwo.rotateY = 0.05;
-    }else{
-      cubeTwo.rotation.y = 0;
-    }
-
+  if(statuss){
+    cubeTwo.rotateY = 0.05;
+    console.log(cubeTwo.rotation.y);
+    
+  }else{
+    cubeTwo.rotation.y = 0;
   }
-  
 
   // scene.rotation.z -=0.05;
   // scene.rotation.x -=0.01;

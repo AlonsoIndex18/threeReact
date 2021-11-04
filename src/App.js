@@ -122,13 +122,13 @@ function rot(newStat){
 }
 
 function size(act){
-  if(act=="plus"){
-    cubeThree.scale.setX(cubeThree.scale.x + 1);
-    cubeThree.scale.setY(cubeThree.scale.y + 1);
-    cubeThree.scale.setZ(cubeThree.scale.z + 1);
+  if(act=="plus" && cubeThree.scale.x<3){
+    cubeThree.scale.setX(cubeThree.scale.x + 0.1);
+    cubeThree.scale.setY(cubeThree.scale.y + 0.1);
+    cubeThree.scale.setZ(cubeThree.scale.z + 0.1);
   }else if(act=="minus" && cubeThree.scale.x>1){
-    cubeThree.scale.setX(cubeThree.scale.x - 1);
-    cubeThree.scale.setY(cubeThree.scale.y - 1);
+    cubeThree.scale.setX(cubeThree.scale.x - 0.1);
+    cubeThree.scale.setY(cubeThree.scale.y - 0.1);
     cubeThree.scale.setZ(cubeThree.scale.z - 1);
   }
 }

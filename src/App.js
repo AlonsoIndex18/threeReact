@@ -115,7 +115,8 @@ function movement(direction){
 function rot(newStat){
   
   if(newStat == "on"){
-    statuss = true;
+    cubeTwo.rotation.y += 0.05;
+    
   }else if(newStat == "off"){
     statuss = false;
   }
@@ -129,7 +130,7 @@ function size(act){
   }else if(act=="minus" && cubeThree.scale.x>1){
     cubeThree.scale.setX(cubeThree.scale.x - 0.1);
     cubeThree.scale.setY(cubeThree.scale.y - 0.1);
-    cubeThree.scale.setZ(cubeThree.scale.z - 1);
+    cubeThree.scale.setZ(cubeThree.scale.z - 0.1);
   }
 }
 

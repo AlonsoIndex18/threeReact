@@ -115,8 +115,7 @@ function movement(direction){
 function rot(newStat){
   
   if(newStat == "on"){
-    cubeTwo.rotation.y += 0.05;
-    
+    statuss = true;
   }else if(newStat == "off"){
     statuss = false;
   }

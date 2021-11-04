@@ -6,7 +6,7 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js';
 import { AxesHelper, Vector3 } from 'three';
 
-var statuss =true;
+var statuss =false;
 const scene = new THREE.Scene();
 
 function addObject(size,posX,posY,posZ,color,scene){
@@ -123,7 +123,7 @@ function rot(newStat){
 
 function size(act){
   if(act=="plus"){
-    cubeThree.scale += new Vector3(1,1,1)
+    cubeThree.scale += new Vector3(cubeThree.scale.x+1,cubeThree.scale.y+1,cubeThree.scale.z+1)
   }else if(act=="minus" && cubeThree.scale.x>1){
     cubeThree.scale -= new Vector3(1,1,1)
   }

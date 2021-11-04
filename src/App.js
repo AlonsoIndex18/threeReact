@@ -141,8 +141,8 @@ function App() {
       <button className="button" id="butRight" onClick={()=>movement("right")}>Right</button>
       <button className="button" id="butRotOn" onClick={()=>rot("on")}>Enable rotation</button>
       <button className="button" id="butRotOff" onClick={()=>rot("off")}>Disable rotation</button>
-      <button className="button" id="butSizePlus" onClick={()=>rot("on")}>Size +</button>
-      <button className="button" id="butSizeMinus" onClick={()=>rot("off")}>Size -</button>
+      <button className="button" id="butSizePlus" onClick={()=>size("plus")}>Size +</button>
+      <button className="button" id="butSizeMinus" onClick={()=>size("minus")}>Size -</button>
       </div>
       
       

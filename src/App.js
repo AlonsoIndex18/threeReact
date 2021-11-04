@@ -123,9 +123,13 @@ function rot(newStat){
 
 function size(act){
   if(act=="plus"){
-    cubeThree.scale += new Vector3(cubeThree.scale.x+1,cubeThree.scale.y+1,cubeThree.scale.z+1)
+    cubeThree.scale.setX(cubeThree.scale.x + 1);
+    cubeThree.scale.setY(cubeThree.scale.y + 1);
+    cubeThree.scale.setZ(cubeThree.scale.z + 1);
   }else if(act=="minus" && cubeThree.scale.x>1){
-    cubeThree.scale -= new Vector3(1,1,1)
+    cubeThree.scale.setX(cubeThree.scale.x - 1);
+    cubeThree.scale.setY(cubeThree.scale.y - 1);
+    cubeThree.scale.setZ(cubeThree.scale.z - 1);
   }
 }
 

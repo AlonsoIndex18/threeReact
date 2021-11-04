@@ -119,7 +119,14 @@ function rot(newStat){
   }else if(newStat == "off"){
     statuss = false;
   }
-  
+}
+
+function size(act){
+  if(act=="plus"){
+    cubeThree.scale += new Vector3(1,1,1)
+  }else if(act=="minus" && cubeThree.scale.x>1){
+    cubeThree.scale -= new Vector3(1,1,1)
+  }
 }
 
 function App() {
@@ -134,6 +141,8 @@ function App() {
       <button className="button" id="butRight" onClick={()=>movement("right")}>Right</button>
       <button className="button" id="butRotOn" onClick={()=>rot("on")}>Enable rotation</button>
       <button className="button" id="butRotOff" onClick={()=>rot("off")}>Disable rotation</button>
+      <button className="button" id="butSizePlus" onClick={()=>rot("on")}>Size +</button>
+      <button className="button" id="butSizeMinus" onClick={()=>rot("off")}>Size -</button>
       </div>
       
       
@@ -148,9 +157,6 @@ const rendering = function() {
   if(statuss){
     cubeTwo.rotation.y += 0.05;
     console.log(cubeTwo.rotation.y);
-    
-  }else{
-    cubeTwo.rotation.y = 0;
   }
 
   // scene.rotation.z -=0.05;

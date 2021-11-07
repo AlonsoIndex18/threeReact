@@ -153,9 +153,9 @@ function App() {
       <button className="button" id="butRotOff" onClick={()=>rot("off")}>Disable rotation</button>
       <button className="button" id="butSizePlus" onClick={()=>size("plus")}>Size +</button>
       <button className="button" id="butSizeMinus" onClick={()=>size("minus")}>Size -</button>
-      <button className="button" id="butColorRed" onClick={()=>color(0xFF0000)}>Size -</button>
-      <button className="button" id="butColorBlue" onClick={()=>color(0x0000FF)}>Size -</button>
-      <button className="button" id="butColorGreen" onClick={()=>color(0x00FF00)}>Size -</button>
+      <button className="button" id="butColorRed" onClick={()=>color(0xFF0000)}>Red</button>
+      <button className="button" id="butColorBlue" onClick={()=>color(0x0000FF)}>Blue</button>
+      <button className="button" id="butColorGreen" onClick={()=>color(0x00FF00)}>Green</button>
       </div>
       
       
